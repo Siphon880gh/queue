@@ -15,6 +15,22 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/app.js"></script>
 
+    <?php
+      if(isset($_GET["dataset"]) && strpos($_GET["dataset"], ".json")>0) {
+        $dataset = sprintf("dataset/%s", $_GET["dataset"]);
+      } else {
+        $dataset = sprintf("dataset/%s", "default.json");
+      }
+    ?>
+    <script>
+      try {
+        window.dataset = "<?php echo $dataset; ?>";
+      } catch(err) {
+        alert(err);
+      }
+
+    </script>
+
   </head>
     <body>
       <div class="container">

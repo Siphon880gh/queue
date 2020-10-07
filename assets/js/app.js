@@ -1,14 +1,14 @@
 window.checkmarks = [];
 
 async function loadList() {
-  const list = await $.getJSON("list.json", (list)=>{
+  const list = await $.getJSON(window.dataset, (list)=>{
     var raw = $("#template-list-item").html();
     var template = Handlebars.compile(raw);
     var html = template({array:list});
     console.log("Test handlebar: ", html);
     console.log("Test handlebar: Should be HTML of list items.");
     $(".list ul").html(html);
-  });
+  }).fail(()=>{console.error("Unable to load dataset .json file");});
   return list;
 }
 

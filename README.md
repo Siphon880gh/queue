@@ -4,11 +4,13 @@ By Weng Fei Fung. This is a todo list that lets you check off tasks that you wil
 
 ## Live Demo
 
-[See GitHub Pages](https://Siphon880gh.github.io/queue).
+[See PHP Page](https://wengindustry.com/tools/queue).
 
 ## Configuring the todo list
 
-Edit list.json. Note an array of text entries. Thoes are the tasks or items.
+Edit dataset/default.json. Note an array of text entries. Those are the tasks or items.
+
+You can have other todo lists in dataset/. Add the filename to the end of the URL to load it. For example, ?dataset=anotherTaskList.json
 
 ## Prerequisites
 
@@ -16,4 +18,4 @@ jQuery, Bootstrap, Handlebar JS, PHP. Let me know if you want a vanilla javascri
 
 ## Deployment
 
-Deploy on a PHP server. Load index.html.
+Deploy on a PHP server. Load index.php.
